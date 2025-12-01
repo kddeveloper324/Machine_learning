@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPL 2025 ML Predictor - Project Report</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --bg-dark: #0a0e17;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --card-border: rgba(255, 255, 255, 0.1);
+            --primary-gradient: linear-gradient(135deg, #00f260 0%, #0575e6 100%);
+            --accent-cyan: #00d2ff;
+            --accent-purple: #9d50bb;
+            --text-main: #ffffff;
+            --text-muted: #b3b3b3;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-dark);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(5, 117, 230, 0.15) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(157, 80, 187, 0.15) 0%, transparent 20%);
+            color: var(--text-main);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* --- Header / Hero --- */
+        header {
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: 
+                linear-gradient(to bottom, rgba(10,14,23,0.3), var(--bg-dark)),
+                url('https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?q=80&w=2670&auto=format&fit=crop'); 
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            padding: 2rem;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(10, 14, 23, 0.85); /* Dark overlay */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #fff, #a5f3fc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--accent-cyan);
+            font-weight: 600;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+        .hero-badges {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--accent-cyan);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            color: #fff;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s;
+        }
+
+        .badge:hover {
+            background: var(--accent-cyan);
+            color: #000;
+            transform: scale(1.05);
+            font-weight: bold;
+        }
+
+        /* --- Layout --- */
+        .container {
+            max-width: 1200px;
+            margin: -50px auto 0;
+            padding: 0 2rem 4rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* --- Sections --- */
+        section {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+            animation: fadeInUp 0.8s ease-out both;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        section:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 15px 50px rgba(0, 210, 255, 0.1);
+        }
+
+        h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+            padding-bottom: 15px;
+        }
+
+        h2 i {
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.2rem;
+        }
+
+        p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            margin-bottom: 1.5rem;
+        }
+
+        strong {
+            color: #fff;
+        }
+
+        /* --- Timeline (Development Journey) --- */
+        .journey-timeline {
+            border-left: 3px solid rgba(0, 210, 255, 0.3);
+            margin-left: 15px;
+            padding-left: 40px;
+            position: relative;
+        }
+
+        .phase {
+            position: relative;
+            margin-bottom: 3rem;
+        }
+
+        .phase::before {
+            content: '';
+            position: absolute;
+            left: -52px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            background: var(--bg-dark);
+            border: 3px solid var(--accent-cyan);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--accent-cyan);
+        }
+
+        .phase h3 {
+            color: #fff;
+            margin-top: 0;
+            font-size: 1.4rem;
+        }
+
+        .phase-tag {
+            color: var(--accent-cyan);
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .phase ul {
+            color: var(--text-muted);
+            padding-left: 20px;
+        }
+        
+        .phase li {
+            margin-bottom: 8px;
+        }
+
+        /* --- Tech Stack Grid --- */
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .tech-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: default;
+        }
+
+        .tech-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-10px);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 10px 30px rgba(0, 210, 255, 0.2);
+        }
+
+        .tech-card i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(to bottom right, #fff, #bbb);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tech-card h4 {
+            margin: 10px 0;
+            font-size: 1.1rem;
+        }
+
+        .tech-card p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        /* --- Advantages Grid --- */
+        .adv-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        .adv-card {
+            background: linear-gradient(145deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.01) 100%);
+            padding: 1.5rem;
+            border-radius: 15px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+            border: 1px solid transparent;
+            transition: 0.3s;
+        }
+
+        .adv-card:hover {
+            border-color: var(--accent-purple);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .adv-icon {
+            background: rgba(157, 80, 187, 0.2);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            color: var(--accent-purple);
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+
+        .adv-content h4 {
+            margin: 0 0 10px 0;
+            color: #fff;
+            font-size: 1.1rem;
+        }
+
+        .adv-content p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        /* --- Future Scope --- */
+        .future-scope-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .future-item {
+            display: flex;
+            gap: 15px;
+            padding: 1rem;
+            border-left: 3px solid var(--accent-cyan);
+            background: linear-gradient(90deg, rgba(0, 210, 255, 0.05) 0%, transparent 100%);
+        }
+
+        .future-item i {
+            color: var(--accent-cyan);
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+        
+        .future-item h4 {
+            margin: 0 0 5px 0;
+            color: #fff;
+        }
+
+        .future-item p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Staggered animation delays for sections */
+        section:nth-child(1) { animation-delay: 0.2s; }
+        section:nth-child(2) { animation-delay: 0.4s; }
+        section:nth-child(3) { animation-delay: 0.6s; }
+        section:nth-child(4) { animation-delay: 0.8s; }
+        section:nth-child(5) { animation-delay: 1.0s; }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--card-border);
+            margin-top: 3rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .hero-badges { gap: 10px; }
+            .container { padding: 0 1.5rem 2rem; }
+            .adv-grid { grid-template-columns: 1fr; }
+            section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="hero-content">
+            <div class="subtitle">Sports Analytics • Machine Learning</div>
+            <h1>IPL 2025 <br>Victory Predictor</h1>
+            <div class="hero-badges" style="margin-top: 2rem;">
+                <span class="badge"><i class="fas fa-robot"></i> AI Powered</span>
+                <span class="badge"><i class="fas fa-database"></i> Big Data</span>
+                <span class="badge"><i class="fas fa-chart-pie"></i> Predictive Analytics</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <!-- Professional Summary -->
+        <section id="summary">
+            <h2><i class="fas fa-microchip"></i> Professional Summary</h2>
+            <p>
+                The <strong>IPL 2025 Ultimate Victory Predictor</strong> is an enterprise-grade data science application engineered to forecast the outcomes of high-stakes cricket matches with statistical precision. Departing from traditional qualitative analysis, this tool harnesses historical ball-by-ball datasets, match results, and venue heuristics to train a high-fidelity Machine Learning model.
+            </p>
+            <p>
+                At its architectural core, the application deploys a <strong>Random Forest Classifier</strong>—an ensemble learning method that constructs a multitude of decision trees during training. This sophisticated approach captures non-linear relationships between complex variables such as toss decisions, venue history, and team momentum, outputting a calibrated confidence score rather than a simple binary prediction.
+            </p>
+        </section>
+
+        <!-- Development Journey -->
+        <section id="journey">
+            <h2><i class="fas fa-code-branch"></i> Development Lifecycle</h2>
+            <div class="journey-timeline">
+                
+                <div class="phase">
+                    <span class="phase-tag">Phase 1 • Data Engineering</span>
+                    <h3>Ingestion & Preprocessing</h3>
+                    <p>Aggregated comprehensive IPL datasets (matches, deliveries, players). Using <strong>Pandas</strong>, we executed rigorous data cleaning to handle null values and filtered for valid match results. Implemented <strong>Label Encoding</strong> to transform categorical features (Teams, Venues) into optimized numeric vectors.</p>
+                </div>
+
+                <div class="phase">
+                    <span class="phase-tag">Phase 2 • Model Architecture</span>
+                    <h3>Algorithm Selection & Training</h3>
+                    <p>Selected the <strong>Random Forest Classifier</strong> (n=100) for its robustness against overfitting in high-dimensional spaces. The model was trained on engineered features: <em>Team 1, Team 2, Venue, Toss Winner,</em> and <em>Toss Decision</em>, achieving a balanced bias-variance tradeoff.</p>
+                </div>
+
+                <div class="phase">
+                    <span class="phase-tag">Phase 3 • Logic Refinement</span>
+                    <h3>Optimization & Debugging</h3>
+                    <p>Iterative refinement resolved critical logic challenges:</p>
+                    <ul>
+                        <li><strong>Probability Normalization:</strong> Restricted the prediction probability space strictly to the two active teams, eliminating "hallucinated" winners.</li>
+                        <li><strong>Warning Suppression:</strong> Resolved Scikit-learn feature name warnings by migrating from NumPy arrays to structured DataFrames for inference.</li>
+                        <li><strong>Relevance Filtering:</strong> Implemented dynamic filtering to exclude defunct franchises (e.g., Pune Warriors) from the user interface.</li>
+                    </ul>
+                </div>
+
+                <div class="phase">
+                    <span class="phase-tag">Phase 4 • UI/UX Transformation</span>
+                    <h3>Frontend Engineering</h3>
+                    <p>Transformed the Python script into a polished web application using Streamlit:</p>
+                    <ul>
+                        <li>Integrated a custom CSS injection for a cinematic stadium background.</li>
+                        <li>Engineered a "Dark Mode" UI with high-contrast typography for readability.</li>
+                        <li>Curated a CDN-hosted asset library for high-resolution team logos.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Tools Used -->
+        <section id="tech-stack">
+            <h2><i class="fas fa-layer-group"></i> Technology Stack</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <i class="fab fa-python"></i>
+                    <h4>Python 3.11</h4>
+                    <p>Backend Logic</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-brain"></i>
+                    <h4>Scikit-Learn</h4>
+                    <p>Random Forest ML</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h4>Streamlit</h4>
+                    <p>Web Framework</p>
+                </div>
+                <div class="tech-card">
+                    <i class="fas fa-table"></i>
+                    <h4>Pandas</h4>
+                    <p>Data Manipulation</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advantages -->
+        <section id="advantages">
+            <h2><i class="fas fa-bolt"></i> Key Advantages</h2>
+            <div class="adv-grid">
+                <div class="adv-card">
+                    <div class="adv-icon"><i class="fas fa-chart-line"></i></div>
+                    <div class="adv-content">
+                        <h4>Probabilistic Insights</h4>
+                        <p>Delivers a granular "Confidence Score" (e.g., 67%) instead of a binary output, enabling better risk assessment.</p>
+                    </div>
+                </div>
+                <div class="adv-card">
+                    <div class="adv-icon"><i class="fas fa-history"></i></div>
+                    <div class="adv-content">
+                        <h4>Contextual Intelligence</h4>
+                        <p>Dynamically fetches and visualizes "Key Players" based on specific historical matchups and team rosters.</p>
+                    </div>
+                </div>
+                <div class="adv-card">
+                    <div class="adv-icon"><i class="fas fa-eye"></i></div>
+                    <div class="adv-content">
+                        <h4>Immersive UX</h4>
+                        <p>Custom-styled "Sports Tech" interface with dynamic backgrounds surpasses standard analytical dashboards.</p>
+                    </div>
+                </div>
+                <div class="adv-card">
+                    <div class="adv-icon"><i class="fas fa-balance-scale"></i></div>
+                    <div class="adv-content">
+                        <h4>Bias Elimination</h4>
+                        <p>Removes emotional subjectivity, relying strictly on data patterns and statistical validity.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future Scope -->
+        <section id="future">
+            <h2><i class="fas fa-rocket"></i> Future Roadmap</h2>
+            <p>Evolutionary path for the "IPL Oracle" ecosystem:</p>
+            <br>
+            <div class="future-scope-list">
+                <div class="future-item">
+                    <div><i class="fas fa-satellite-dish"></i></div>
+                    <div>
+                        <h4>Real-Time API Integration</h4>
+                        <p>Auto-fetch Toss & Playing XI data 30 mins pre-match.</p>
+                    </div>
+                </div>
+                <div class="future-item">
+                    <div><i class="fas fa-cloud-sun-rain"></i></div>
+                    <div>
+                        <h4>Environmental Analytics</h4>
+                        <p>Integrate weather (Dew/Humidity) and Pitch Reports.</p>
+                    </div>
+                </div>
+                <div class="future-item">
+                    <div><i class="fas fa-network-wired"></i></div>
+                    <div>
+                        <h4>Deep Learning (LSTM)</h4>
+                        <p>Analyze sequential form and momentum over a season.</p>
+                    </div>
+                </div>
+                <div class="future-item">
+                    <div><i class="fas fa-users-cog"></i></div>
+                    <div>
+                        <h4>Fantasy Team Engine</h4>
+                        <p>Generate optimal "Dream Teams" based on match predictions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 IPL Oracle Project | Engineered with Python & Machine Learning</p>
+    </footer>
+
+</body>
+</html>

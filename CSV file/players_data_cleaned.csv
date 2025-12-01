@@ -1,0 +1,773 @@
+player_id,player_name,bat_style,bowl_style,field_pos
+6730,Mohsin Khan,Left hand Bat,Left arm Medium fast,Unknown
+22,Rashid Khan,Right hand Bat,Legbreak Googly, 
+590,K Rabada,Left hand Bat,Right arm Fast, 
+1424,SN Khan,Right hand Bat,Legbreak, 
+963,MN Samuels,Right hand Bat,Right arm Offbreak, 
+53,SB Jakati,Left hand Bat,Slow Left arm Orthodox, 
+12,DA Warner,Left hand Bat,Legbreak, 
+73,MP Stoinis,Right hand Bat,Right arm Medium, 
+1119,R Tewatia,Left hand Bat,Legbreak, 
+268,RA Tripathi,Right hand Bat,Right arm Medium, 
+163,RD Chahar,Right hand Bat,Legbreak Googly, 
+186,S Nadeem,Right hand Bat,Slow Left arm Orthodox, 
+59,MK Pandey,Right hand Bat,Right arm Medium, 
+531,KS Williamson,Right hand Bat,Right arm Offbreak, 
+56,G Gambhir,Left hand Bat,Legbreak, 
+39,MK Tiwary,Right hand Bat,Legbreak Googly, 
+68,M Vohra,Right hand Bat,Right arm Medium, 
+638,NB Singh,Right hand Bat,Right arm Medium, 
+40,R Bhatia,Right hand Bat,Right arm Medium fast, 
+1233,SS Tiwary,Left hand Bat, , 
+1396,MA Wood,Right hand Bat,Right arm Fast, 
+47,SK Raina,Left hand Bat,Right arm Offbreak, 
+1242,R Vinay Kumar,Right hand Bat,Right arm Medium, 
+541,SE Marsh,Left hand Bat,Slow Left arm Orthodox, 
+6,Sachin Baby,Left hand Bat,Right arm Offbreak, 
+525,J Yadav,Right hand Bat,Right arm Offbreak, 
+70,AR Patel,Left hand Bat,Slow Left arm Orthodox, 
+63,PP Chawla,Left hand Bat,Legbreak, 
+30,HH Pandya,Right hand Bat,Right arm Medium fast, 
+36,SPD Smith,Right hand Bat,Legbreak Googly, 
+55,S Kaushik,Right hand Bat,Left arm Wrist spin, 
+52,P Kumar,Right hand Bat,Right arm Medium, 
+41,DL Chahar,Right hand Bat,Right arm Medium, 
+1429,K Khejroliya,Left hand Bat,Left arm Medium fast, 
+32,MJ McClenaghan,Left hand Bat,Left arm Fast medium, 
+457,AD Mathews,Right hand Bat,Right arm Medium, 
+1286,Avesh Khan,Right hand Bat,Right arm Fast medium, 
+45,JJ Roy,Right hand Bat, , 
+43,AB Dinda,Right hand Bat,Right arm Medium fast, 
+579,Shakib Al Hasan,Left hand Bat,Slow Left arm Orthodox, 
+1448,K Gowtham,Right hand Bat,Right arm Offbreak, 
+72,DA Miller,Left hand Bat,Right arm Offbreak, 
+60,YK Pathan,Right hand Bat,Right arm Offbreak, 
+7,STR Binny,Right hand Bat,Right arm Medium, 
+3,TM Head,Left hand Bat,Right arm Offbreak,Wicketkeeper
+173,Iqbal Abdulla,Left hand Bat,Slow Left arm Orthodox, 
+15,Yuvraj Singh,Left hand Bat,Slow Left arm Orthodox, 
+74,Swapnil Singh,Right hand Bat,Slow Left arm Orthodox, 
+760,MJ Guptill,Right hand Bat,Right arm Offbreak, 
+182,CH Morris,Right hand Bat,Right arm Fast medium, 
+361,LH Ferguson,Right hand Bat,Right arm Fast, 
+1285,HV Patel,Right hand Bat,Right arm Medium, 
+1449,S Gopal,Right hand Bat,Legbreak, 
+405,KC Cariappa,Right hand Bat,Legbreak, 
+196,Basil Thampi,Right hand Bat,Right arm Fast medium, 
+744,AR Bawne,Right hand Bat,Right arm Offbreak, 
+676,KV Sharma,Left hand Bat,Legbreak Googly, 
+171,Vishnu Vinod,Right hand Bat, ,Wicketkeeper
+332,V Kohli,Right hand Bat,Right arm Medium, 
+28,KH Pandya,Left hand Bat,Slow Left arm Orthodox, 
+448,AF Milne,Right hand Bat,Right arm Fast, 
+20,B Kumar,Right hand Bat,Right arm Medium, 
+347,Ishan Kishan,Left hand Bat, ,Wicketkeeper
+65,SP Narine,Left hand Bat,Right arm Offbreak, 
+359,Ankit Sharma,Left hand Bat,Slow Left arm Orthodox, 
+187,Z Khan,Right hand Bat,Left arm Fast medium, 
+185,A Mishra,Right hand Bat,Legbreak, 
+726,Ankit Soni,Right hand Bat,Legbreak, 
+197,Tejas Baroka,Right hand Bat,Legbreak Googly, 
+5,SR Watson,Right hand Bat,Right arm Fast medium, 
+460,Mohammed Shami,Right hand Bat,Right arm Fast, 
+351,AJ Tye,Right hand Bat,Right arm Medium fast, 
+1393,DJ Bravo,Right hand Bat,Right arm Medium, 
+177,AP Tare,Right hand Bat, ,Wicketkeeper
+7539,B Indrajith,Right hand Bat,Legbreak Googly, 
+4063,T Banton,Right hand Bat, ,Wicketkeeper
+6115,K Yadav,Left hand Bat,Left arm Fast medium, 
+3649,AS Roy,Left hand Bat,Slow Left arm Orthodox, 
+5407,M Shahrukh Khan,Right hand Bat,Right arm Offbreak, 
+4960,MR Marsh,Right hand Bat,Right arm Medium, 
+6761,R Shepherd,Right hand Bat,Right arm Fast medium, 
+8321,Rahmanullah Gurbaz,Right hand Bat, ,Wicketkeeper
+7751,SA Abbott,Right hand Bat,Right arm Fast medium, 
+7302,OC McCoy,Left hand Bat,Left arm Fast medium, 
+4970,P Dubey,Right hand Bat,Legbreak Googly, 
+8355,Mukesh Kumar,Right hand Bat,Right arm Medium, 
+3451,DW Steyn,Right hand Bat,Right arm Fast, 
+5411,RP Meredith,Right hand Bat,Right arm Fast, 
+4098,JO Holder,Right hand Bat,Right arm Medium fast, 
+7895,R Sai Kishore,Left hand Bat,Slow Left arm Orthodox, 
+1805,RK Bhui,Right hand Bat,Legbreak Googly, 
+6054,AK Markram,Right hand Bat,Right arm Offbreak, 
+6710,Akash Deep,Right hand Bat,Right arm Fast medium, 
+5976,KS Bharat,Right hand Bat, ,Wicketkeeper
+6681,Tilak Varma,Left hand Bat,Right arm Offbreak, 
+4119,RD Gaikwad,Right hand Bat,Right arm Offbreak, 
+6739,A Manohar,Right hand Bat,Legbreak Googly, 
+7843,Fazalhaq Farooqi,Right hand Bat,Left arm Fast medium, 
+7083,KR Sen,Right hand Bat,Right arm Fast, 
+3747,P Simran Singh,Right hand Bat, ,Wicketkeeper
+5343,M Jansen,Right hand Bat,Left arm Medium fast, 
+5629,FA Allen,Right hand Bat,Slow Left arm Orthodox, 
+5935,Anuj Rawat,Left hand Bat, , 
+7017,M Theekshana,Right hand Bat,Right arm Offbreak, 
+1833,JC Archer,Right hand Bat,Right arm Fast, 
+2142,DJ Willey,Left hand Bat,Left arm Fast medium, 
+1849,PP Shaw,Right hand Bat,Right arm Offbreak, 
+6017,Umran Malik,Right hand Bat,Right arm Fast, 
+2295,SP Goswami,Left hand Bat, ,Wicketkeeper
+3156,HF Gurney,Right hand Bat,Left arm Fast medium, 
+2743,CA Ingram,Left hand Bat,Legbreak,Wicketkeeper
+6798,Mukesh Choudhary,Left hand Bat,Left arm Medium, 
+3214,SD Lad,Right hand Bat,Right arm Offbreak, 
+8305,J Little,Right hand Bat,Left arm Fast medium, 
+8007,M Pathirana,Right hand Bat,Right arm Fast, 
+2701,S Dube,Left hand Bat,Right arm Medium, 
+3145,S Midhun,Right hand Bat,Legbreak Googly, 
+2353,CJ Dala,Right hand Bat,Right arm Medium, 
+6729,PVD Chameera,Right hand Bat,Right arm Fast, 
+4097,PK Garg,Right hand Bat,Right arm Medium, 
+7192,Aman Hakim Khan,Right hand Bat,Right arm Medium, 
+6734,MS Wade,Left hand Bat,Right arm Medium,Wicketkeeper
+4310,Shahbaz Ahmed,Left hand Bat,Slow Left arm Orthodox, 
+4059,Ravi Bishnoi,Right hand Bat,Legbreak Googly, 
+4134,KL Nagarkoti,Right hand Bat,Right arm Fast, 
+4320,DR Sams,Right hand Bat,Left arm Fast medium, 
+7496,DJ Mitchell,Right hand Bat,Right arm Medium, 
+5422,C Sakariya,Left hand Bat,Left arm Medium fast, 
+2352,S Lamichhane,Right hand Bat,Legbreak Googly, 
+2910,GH Vihari,Right hand Bat,Right arm Offbreak, 
+8349,RR Rossouw,Left hand Bat,Right arm Offbreak, 
+4664,JR Hazlewood,Left hand Bat,Right arm Fast medium, 
+8333,KR Mayers,Left hand Bat,Right arm Medium, 
+5573,LI Meriwala,Left hand Bat,Left arm Fast medium, 
+2894,NS Naik,Right hand Bat, ,Wicketkeeper
+8191,PN Mankad,Right hand Bat,Right arm Medium, 
+2349,Abhishek Sharma,Left hand Bat,Slow Left arm Orthodox, 
+7621,K Kartikeya,Right hand Bat,"Slow Left arm Orthodox, Left arm Wrist spin", 
+6520,AU Rashid,Right hand Bat,Legbreak, 
+2825,CV Varun,Right hand Bat,Legbreak Googly, 
+4212,Kartik Tyagi,Right hand Bat,Right arm Fast, 
+4104,YBK Jaiswal,Left hand Bat,Legbreak, 
+6519,IC Porel,Right hand Bat,Right arm Medium, 
+1740,H Klaasen,Right hand Bat,Right arm Offbreak,Wicketkeeper
+5526,Virat Singh,Left hand Bat,Legbreak Googly, 
+5181,Monu Kumar,Right hand Bat,Right arm Medium, 
+10135,N Burger,Left hand Bat,Left arm Fast medium,Unknown
+10159,SH Johnson,Left hand Bat,Left arm Fast,Unknown
+10070,Sameer Rizvi,Right hand Bat,Right arm Offbreak,Unknown
+10291,A Raghuvanshi,Right hand Bat,Slow Left arm Orthodox,Unknown
+11192,AA Kulkarni,Right hand Bat,Right arm Medium,Unknown
+10169,SZ Mulani,Left hand Bat,Slow Left arm Orthodox,Unknown
+11834,Prince Yadav,Right hand Bat,Right arm Fast,Unknown
+11212,RJ Gleeson,Right hand Bat,Right arm Fast Medium,Unknown
+11282,MJ Suthar,Left hand Bat,Slow Left arm Orthodox,Unknown
+11366,A Kamboj,Right hand Bat,Right arm Medium,Unknown
+11429,V Kaverappa,Right hand Bat,Right arm Fast medium,Unknown
+10232,KT Maphaka,Left hand Bat,Left arm Fast,Unknown
+8808,D Jansen,Right hand Bat,Left arm Fast,Unknown
+10065,R Ravindra,Left hand Bat,Slow Left arm Orthodox,Unknown
+8389,Arshad Khan,Left hand Bat,Left arm Medium,Unknown
+10083,Sumit Kumar,Right hand Bat,Right arm Medium fast,Unknown
+10488,Saurav Chauhan,Left hand Bat,Right arm Offbreak,Unknown
+11981,DL Vettori,Left hand Bat,Slow Left arm Orthodox, 
+9759,Sanvir Singh,Right hand Bat,Right arm Medium, 
+8769,Yudhvir Singh,Right hand Bat,Right arm Medium fast, 
+8930,Liton Das,Right hand Bat,Right arm Offbreak,Wicketkeeper
+12015,WPUJC Vaas,Left hand Bat,Left arm Fast medium, 
+12013,AS Yadav,Right hand Bat,Right arm Offbreak, 
+12127,VRV Singh,Right hand Bat,Right arm Medium fast, 
+12016,RP Singh,Right hand Bat,Left arm Fast medium, 
+11984,GD McGrath,Right hand Bat,Right arm Fast medium, 
+11982,MF Maharoof,Right hand Bat,Right arm Fast medium, 
+12295,HH Gibbs,Right hand Bat,Right arm Bowler, 
+11924,LR Shukla,Right hand Bat,Right arm Medium, 
+9524,Vivrant Sharma,Left hand Bat,Legbreak Googly, 
+8396,MG Bracewell,Left hand Bat,Right arm Offbreak,Wicketkeeper
+11926,AB Agarkar,Right hand Bat,Right arm Fast, 
+12012,SB Styris,Right hand Bat,Right arm Medium, 
+8890,Naveen-ul-Haq,Right hand Bat,Right arm Medium fast, 
+12318,BJ Hodge,Right hand Bat,Right arm Offbreak, 
+11996,S Chanderpaul,Left hand Bat,Legbreak, 
+8433,Abishek Porel,Left hand Bat, ,Wicketkeeper
+11963,T Kohli,Right hand Bat,Right arm Medium, 
+9824,Nithish Kumar Reddy,Right hand Bat,Right arm Medium fast, 
+11954,KC Sangakkara,Left hand Bat,Right arm Offbreak,Wicketkeeper
+12056,Shahid Afridi,Right hand Bat,Legbreak Googly, 
+12323,Umar Gul,Right hand Bat,Right arm Fast medium, 
+8475,Suyash Sharma,Right hand Bat,Legbreak Googly, 
+11949,P Amarnath,Right hand Bat,Right arm Medium, 
+8386,N Wadhera,Left hand Bat,Legbreak, 
+12121,RR Sarwan,Right hand Bat,Legbreak, 
+11993,MA Khote,Right hand Bat,Right arm Medium, 
+11933,JH Kallis,Right hand Bat,Right arm Fast medium, 
+11983,B Geeves,Right hand Bat,Right arm Fast medium, 
+8605,Mohit Rathee,Right hand Bat,Legbreak, 
+9431,R Goyal,Left hand Bat,Left arm Wrist spin, 
+10707,Arshad Khan (2),Left hand Bat,Left arm Medium, 
+8470,Dhruv Jurel,Right hand Bat, , 
+11952,K Goel,Left hand Bat,Right arm Offbreak, 
+8569,SSB Magala,Right hand Bat,Right arm Fast medium, 
+11947,S Badrinath,Right hand Bat,Right arm Offbreak, 
+12071,VY Mahesh,Right hand Bat,Right arm Medium fast, 
+11958,P Dharmani,Right hand Bat, ,Wicketkeeper
+11923,Mohammad Hafeez,Right hand Bat,Right arm Offbreak, 
+11946,JDP Oram,Left hand Bat,Right arm Fast medium, 
+12105,D Kalyankrishna,Right hand Bat,Right arm Medium fast, 
+11986,ST Jayasuriya,Left hand Bat,Slow Left arm Orthodox, 
+11989,PR Shah,Right hand Bat, ,Wicketkeeper
+8597,MW Short,Right hand Bat,Right arm Offbreak, 
+11980,M Manhas,Right hand Bat,Right arm Offbreak,Wicketkeeper
+11959,B Lee,Right hand Bat,Right arm Fast, 
+11921,RT Ponting,Right hand Bat,Right arm Medium, 
+11922,DJ Hussey,Right hand Bat,Right arm Offbreak, 
+12572,NK Patel,Left hand Bat,Unknown,Unknown
+12338,SP Fleming,Left hand Bat, , 
+16455,TR Birt,Left hand Bat,Right arm Medium,Occasional Wicketkeeper
+16953,AA Kazi,Left hand Bat,Slow Left arm Orthodox, 
+14798,J Theron,Right hand Bat,Right arm Medium fast, 
+34126,SS Mundhe,Right hand Bat,Right arm Medium, 
+15862,Sunny Singh,Right hand Bat,Right arm Medium fast, 
+13301,R Bishnoi,Right hand Bat,Right arm Medium fast, 
+13388,AS Raut,Right hand Bat,Legbreak Googly, 
+14765,R Sharma,Right hand Bat,Legbreak Googly, 
+15334,RS Sodhi,Right hand Bat,Right arm Medium, 
+14648,MJ Lumb,Left hand Bat,Right arm Medium, 
+34959,LJ Wright,Right hand Bat,Right arm Medium, 
+14476,R Sathish,Right hand Bat,Right arm Medium, 
+12372,Misbah-ul-Haq,Right hand Bat,Legbreak, 
+14464,OA Shah,Right hand Bat,Right arm Offbreak, 
+13248,AM Salvi,Right hand Bat,Right arm Medium, 
+13016,A Nel,Right hand Bat,Right arm Fast medium, 
+16380,NL McCullum,Right hand Bat,Right arm Offbreak, 
+34811,N Saini,Right hand Bat, ,Wicketkeeper
+15261,AN Ahmed,Right hand Bat,Right arm Medium fast, 
+16743,I Malhotra,Right hand Bat,Right arm Medium fast, 
+14757,MD Mishra,Right hand Bat,Right arm Offbreak, 
+34983,RJ Peterson,Left hand Bat,Slow Left arm Orthodox, 
+14463,CA Pujara,Right hand Bat,Legbreak, 
+14489,A Uniyal,Left hand Bat,Left arm Medium, 
+13651,GR Napier,Right hand Bat,Right arm Medium, 
+14136,J Botha,Right hand Bat,Right arm Offbreak, 
+13227,Kamran Khan,Left hand Bat,Left arm Medium fast, 
+12454,U Kaul,Left hand Bat, ,Wicketkeeper
+13620,S Tyagi,Right hand Bat,Right arm Medium, 
+16276,BJ Haddin,Right hand Bat, ,Wicketkeeper
+12518,CK Kapugedera,Right hand Bat,Right arm Medium,Occasional Wicketkeeper
+12471,S Anirudha,Right hand Bat, , 
+13384,RJ Quiney,Left hand Bat,Right arm Medium, 
+13260,YA Abdulla,Left hand Bat,Left arm Fast medium, 
+12650,TM Dilshan,Right hand Bat,Right arm Offbreak,Wicketkeeper
+13551,MN van Wyk,Right hand Bat,Slow Left arm Orthodox,Wicketkeeper
+14206,SS Shaikh,Right hand Bat,Right arm Medium, 
+15878,AC Thomas,Right hand Bat,Right arm Fast medium, 
+15003,PD Collingwood,Right hand Bat,Right arm Medium, 
+15239,AP Dole,Right hand Bat,Right arm Medium fast, 
+14216,Jaskaran Singh,Right hand Bat,Right arm Medium, 
+12850,H Das,Right hand Bat, ,Wicketkeeper
+33972,AA Chavan,Left hand Bat,Slow Left arm Orthodox, 
+13986,A Mithun,Right hand Bat,Right arm Medium, 
+12339,S Vidyut,Left hand Bat,Slow Left arm Orthodox, 
+15851,JEC Franklin,Left hand Bat,Left arm Medium, 
+13508,AN Ghosh,Right hand Bat,Right arm Medium, 
+12422,RR Raje,Right hand Bat,Right arm Fast medium, 
+14008,SS Sarkar,Right hand Bat,Right arm Medium, 
+15896,RN ten Doeschate,Right hand Bat,Right arm Medium fast, 
+15140,DE Bollinger,Left hand Bat,Left arm Fast medium, 
+14567,S Ladda,Right hand Bat,Legbreak, 
+16249,DH Yagnik,Left hand Bat, , 
+13245,DP Nannes,Right hand Bat,Left arm Fast, 
+13810,A Singh,Right hand Bat,Right arm Medium fast, 
+34392,TP Sudhindra,Left hand Bat,Right arm Fast, 
+15779,S Randiv,Right hand Bat,Right arm Offbreak, 
+13383,PC Valthaty,Right hand Bat,Right arm Medium, 
+34554,P Awana,Right hand Bat,Right arm Medium, 
+12710,Shoaib Akhtar,Right hand Bat,Right arm Fast, 
+34530,RR Bhatkal,Right hand Bat,Right arm Medium, 
+34343,KK Cooper,Right hand Bat,Right arm Medium, 
+12661,AD Mascarenhas,Right hand Bat,Right arm Fast medium, 
+14541,JM Kemp,Right hand Bat,Right arm Fast medium, 
+12362,LPC Silva,Right hand Bat,Legbreak, 
+12580,SR Tendulkar,Right hand Bat,"Right arm Offbreak, Legbreak Googly", 
+13785,RJ Harris,Right hand Bat,Right arm Fast, 
+15339,L Ablish,Right hand Bat,Right arm Medium fast, 
+15384,S Sriram,Left hand Bat,Slow Left arm Orthodox, 
+14201,Mashrafe Mortaza,Right hand Bat,Right arm Fast medium, 
+14492,SW Tait,Right hand Bat,Right arm Fast, 
+6657,DP Conway,Left hand Bat,Right arm Medium,Occasional Wicketkeeper
+8383,C Green,Right hand Bat,Right arm Fast medium, 
+13258,VS Malik,Right hand Bat,Right arm Medium, 
+4339,N Jagadeesan,Right hand Bat, ,Wicketkeeper
+76,Sandeep Sharma,Right hand Bat,Right arm Medium, 
+14279,Y Nagar,Right hand Bat,Right arm Offbreak, 
+1314,IR Jaggi,Right hand Bat,Legbreak Googly, 
+44,Imran Tahir,Right hand Bat,Legbreak Googly, 
+900,PJ Sangwan,Right hand Bat,Left arm Medium, 
+11943,MEK Hussey,Left hand Bat,Right arm Medium, 
+2024,L Ngidi,Right hand Bat,Right arm Fast medium, 
+11991,SM Pollock,Right hand Bat,Right arm Fast medium, 
+35966,MDKJ Perera,Left hand Bat, ,Wicketkeeper
+8748,Vijaykumar Vyshak,Right hand Bat,Right arm Medium, 
+38647,JW Hastings,Right hand Bat,Right arm Fast medium, 
+7546,Harshit Rana,Right hand Bat,Right arm Fast, 
+8098,A Tomar,Right hand Bat,Right arm Offbreak, 
+1327,CJ Jordan,Right hand Bat,Right arm Fast medium, 
+2315,P Chopra,Right hand Bat,Legbreak Googly,Occasional Wicketkeeper
+11971,SK Warne,Right hand Bat,Legbreak Googly, 
+16693,AC Blizzard,Left hand Bat,Left arm Medium, 
+36610,DJG Sammy,Right hand Bat,Right arm Medium, 
+49,KD Karthik,Right hand Bat,Right arm Offbreak,Wicketkeeper
+176,B Stanlake,Left hand Bat,Right arm Fast, 
+10109,MA Starc,Left hand Bat,Left arm Fast, 
+11940,SB Joshi,Left hand Bat,Slow Left arm Orthodox, 
+12746,Younis Khan,Right hand Bat,"Right arm Medium, Legbreak", 
+40242,P Sahu,Right hand Bat,Legbreak Googly, 
+418,MM Patel,Right hand Bat,Right arm Medium fast, 
+12252,DB Das,Right hand Bat,Legbreak Googly, 
+6287,RV Patel,Right hand Bat,Right arm Medium fast, 
+12539,T Taibu,Right hand Bat,Right arm Medium,Wicketkeeper
+34697,CJ McKay,Right hand Bat,Right arm Fast medium, 
+14360,RA Shaikh,Left hand Bat,Left arm Medium, 
+2188,M Prasidh Krishna,Right hand Bat,Right arm Fast medium, 
+6047,GHS Garton,Left hand Bat,Left arm Fast, 
+54,DS Kulkarni,Right hand Bat,Right arm Medium, 
+69,WP Saha,Right hand Bat, ,Wicketkeeper
+42,A Zampa,Right hand Bat,Legbreak Googly, 
+40725,PSP Handscomb,Right hand Bat, ,Wicketkeeper
+8295,RS Hangargekar,Right hand Bat,Right arm Fast medium, 
+67,HM Amla,Right hand Bat,"Right arm Medium, Right arm Offbreak", 
+25,RG Sharma,Right hand Bat,Right arm Offbreak, 
+11972,SK Trivedi,Right hand Bat,Right arm Medium, 
+13595,TL Suman,Right hand Bat,Right arm Offbreak, 
+34774,A Ashish Reddy,Right hand Bat,Right arm Medium, 
+12238,B Chipli,Right hand Bat,Right arm Medium, 
+14653,S Narwal,Left hand Bat,Right arm Medium, 
+12204,SD Chitnis,Right hand Bat,Right arm Offbreak, 
+35864,Sunny Gupta,Right hand Bat,Right arm Offbreak, 
+31,TG Southee,Right hand Bat,Right arm Medium fast, 
+17,BCJ Cutting,Right hand Bat,Right arm Fast medium, 
+38548,BE Hendricks,Left hand Bat,Left arm Fast medium, 
+13083,BAW Mendis,Right hand Bat,Right arm Offbreak, 
+12327,SA Asnodkar,Right hand Bat,Right arm Offbreak, 
+11970,D Salunkhe,Right hand Bat,Legbreak, 
+11966,M Kaif,Right hand Bat,Right arm Offbreak, 
+36536,IC Pandey,Right hand Bat,Right arm Medium, 
+14487,P Dogra,Right hand Bat,Legbreak, 
+13692,LA Carseldine,Left hand Bat,Left arm Medium, 
+19,Bipul Sharma,Left hand Bat,Slow Left arm Orthodox, 
+4170,JR Philippe,Right hand Bat, ,Wicketkeeper
+16199,TD Paine,Right hand Bat,Right arm Medium,Wicketkeeper
+11937,AA Noffke,Right hand Bat,Right arm Fast medium, 
+12041,Kamran Akmal,Right hand Bat, ,Wicketkeeper
+36311,BJ Rohrer,Left hand Bat, ,Occasional Wicketkeeper
+36555,CM Gautam,Right hand Bat, ,Wicketkeeper
+41020,F Behardien,Right hand Bat,Right arm Fast medium, 
+37031,PV Tambe,Right hand Bat,Legbreak, 
+35892,MC Juneja,Right hand Bat,Right arm Offbreak, 
+41286,ER Dwivedi,Right hand Bat, ,Wicketkeeper
+35459,K Upadhyay,Right hand Bat,Right arm Medium, 
+37347,MG Neser,Right hand Bat,Right arm Medium fast, 
+40895,UT Khawaja,Left hand Bat,Right arm Medium, 
+40385,KJ Abbott,Right hand Bat,Right arm Fast medium, 
+38924,DJ Muthuswami,Right hand Bat,Right arm Medium, 
+6360,Anmolpreet Singh,Right hand Bat,Right arm Offbreak, 
+3011,JP Behrendorff,Right hand Bat,Left arm Fast medium, 
+27,AT Rayudu,Right hand Bat,Right arm Offbreak,Occasional Wicketkeeper
+1437,AD Russell,Right hand Bat,Right arm Fast, 
+34601,V Pratap Singh,Right hand Bat,Right arm Medium, 
+1856,LE Plunkett,Right hand Bat,Right arm Fast, 
+13563,RE van der Merwe,Right hand Bat,Slow Left arm Orthodox, 
+58,RV Uthappa,Right hand Bat,Right arm Medium,Occasional Wicketkeeper
+8945,PD Salt,Right hand Bat,Right arm Offbreak,Wicketkeeper
+293,V Shankar,Right hand Bat,Right arm Medium, 
+37595,NJ Maddinson,Left hand Bat,Slow Left arm Orthodox, 
+11934,CL White,Right hand Bat,Legbreak Googly, 
+11969,M Rawat,Right hand Bat, ,Wicketkeeper
+9181,Gurnoor Brar,Left hand Bat,Right arm Fast, 
+46,BB McCullum,Right hand Bat,"Right arm Medium, Right arm Offbreak",Wicketkeeper
+13863,M Morkel,Left hand Bat,Right arm Fast, 
+7902,KS Sharma,Right hand Bat,Right arm Offbreak, 
+16648,P Parameswaran,Right hand Bat,Left arm Medium, 
+33961,P Prasanth,Left hand Bat,Slow Left arm Orthodox, 
+5473,Lalit Yadav,Right hand Bat,Right arm Offbreak, 
+16,DJ Hooda,Right hand Bat,Right arm Offbreak, 
+1990,IS Sodhi,Right hand Bat,Legbreak, 
+494,BB Sran,Left hand Bat,Left arm Medium, 
+34382,DJ Harris,Right hand Bat,Right arm Medium, 
+3518,Y Prithvi Raj,Left hand Bat,Left arm Medium, 
+1964,JP Duminy,Left hand Bat,Right arm Offbreak, 
+15866,NJ Rimmington,Right hand Bat,Right arm Fast medium, 
+21,A Nehra,Right hand Bat,Left arm Medium fast, 
+3495,Harpreet Brar,Left hand Bat,Slow Left arm Orthodox, 
+6033,GD Phillips,Right hand Bat,Right arm Offbreak,Wicketkeeper
+181,RR Pant,Left hand Bat, ,Wicketkeeper
+15829,AUK Pathan,Right hand Bat,Right arm Medium, 
+5562,Jalaj S Saxena,Right hand Bat,"Right arm Offbreak, Legbreak Googly", 
+3230,R Parag,Right hand Bat,Legbreak, 
+183,CR Brathwaite,Right hand Bat,Right arm Fast medium, 
+4406,AT Carey,Left hand Bat, ,Wicketkeeper
+11967,DS Lehmann,Left hand Bat,Slow Left arm Orthodox, 
+7134,SS Prabhudessai,Right hand Bat,Right arm Medium, 
+10939,N Thushara,Right hand Bat,Right arm Medium fast,Unknown
+11068,LB Williams,Left hand Bat,Right arm Medium fast,Unknown
+10163,Naman Dhir,Right hand Bat,Right arm Offbreak,Unknown
+11376,Gulbadin Naib,Right hand Bat,Right arm Medium fast,Unknown
+11781,Aniket Verma,Right hand Bat,Right arm Medium fast,Unknown
+10690,Tanush Kotian,Right hand Bat,Right arm Offbreak,Unknown
+11847,Priyansh Arya,Left hand Bat,Right arm Offbreak,Unknown
+11854,Suryansh Shedge,Right hand Bat,Right arm Medium fast,Unknown
+10078,SD Hope,Right hand Bat,Unknown,Wicketkeeper
+10160,L Wood,Left hand Bat,Left arm Fast medium,Unknown
+10168,G Coetzee,Right hand Bat,Right arm Fast,Unknown
+10604,KA Maharaj,Right hand Bat,Slow Left arm Orthodox,Unknown
+10630,WG Jacks,Right hand Bat,Right arm Offbreak,Unknown
+10667,J Fraser-McGurk,Right hand Bat,Legbreak Googly,Unknown
+11805,R Minz,Left hand Bat,Unknown,Slow Left arm Orthodox
+10382,SB Dubey,Left hand Bat,Right arm Offbreak,Unknown
+10710,S Joseph,Left hand Bat,Right arm Fast,Unknown
+11389,D Ferreira,Right hand Bat,Right arm Offbreak,Wicketkeeper
+11416,V Viyaskanth,Right hand Bat,Legbreak,Unknown
+11799,V Puthur,Right hand Bat,Left arm Wrist spin,Unknown
+11801,RD Rickelton,Left hand Bat,Unknown,Wicketkeeper
+11843,V Nigam,Right hand Bat,Legbreak,Unknown
+8805,Arjun Tendulkar,Left hand Bat,Left arm Medium fast, 
+360,SN Thakur,Right hand Bat,Right arm Medium, 
+36966,P Suyal,Right hand Bat,Left arm Medium, 
+15108,MB Parmar,Right hand Bat,Right arm Offbreak, 
+6694,R Powell,Right hand Bat,Right arm Medium fast, 
+35364,AP Majumdar,Right hand Bat,Legbreak Googly, 
+33919,Anand Rajan,Right hand Bat,Right arm Medium, 
+2824,GC Viljoen,Right hand Bat,Right arm Fast, 
+8773,Atharva Taide,Left hand Bat,Slow Left arm Orthodox, 
+12065,Shoaib Malik,Right hand Bat,Right arm Offbreak, 
+12070,Mohammad Asif,Left hand Bat,Right arm Fast medium, 
+23,PA Patel,Left hand Bat,Right arm Offbreak,Wicketkeeper
+8809,Noor Ahmad,Right hand Bat,Left arm Wrist spin, 
+6310,TL Seifert,Right hand Bat, ,Wicketkeeper
+38229,Shivam Sharma,Right hand Bat,Right arm Offbreak, 
+5349,RM Patidar,Right hand Bat,Right arm Offbreak, 
+12669,LA Pomersbach,Left hand Bat,Right arm Offbreak, 
+39089,RG More,Right hand Bat,Right arm Medium, 
+7652,Simarjeet Singh,Right hand Bat,Right arm Medium fast, 
+2227,MM Ali,Left hand Bat,Right arm Offbreak, 
+12364,DB Ravi Teja,Right hand Bat,Legbreak Googly, 
+491,Mohammad Nabi,Right hand Bat,Right arm Offbreak, 
+569,JP Faulkner,Right hand Bat,Left arm Fast medium, 
+241,VR Aaron,Right hand Bat,Right arm Fast, 
+15368,B Sumanth,Right hand Bat,Right arm Medium fast, 
+8005,PH Solanki,Right hand Bat,Legbreak, 
+5686,KW Richardson,Right hand Bat,Right arm Fast medium, 
+35,MA Agarwal,Right hand Bat,Right arm Offbreak, 
+9,TS Mills,Right hand Bat,Left arm Fast, 
+9508,JE Root,Right hand Bat,"Right arm Offbreak, Legbreak", 
+2662,KK Ahmed,Right hand Bat,Left arm Medium, 
+15846,DJ Jacobs,Right hand Bat,Right arm Medium,Wicketkeeper
+61,SA Yadav,Right hand Bat,"Right arm Medium, Right arm Offbreak", 
+2700,SO Hetmyer,Left hand Bat, , 
+36069,BMAJ Mendis,Left hand Bat,Legbreak, 
+41723,PWA Mulder,Right hand Bat,Right arm Medium,Unknown
+41726,Zeeshan Ansari,Right hand Bat,Legbreak Googly,Unknown
+41758,J Overton,Right hand Bat,Right arm Fast,Unknown
+41785,Ashwani Kumar,Left hand Bat,Left arm Medium,Unknown
+41851,PHKD Mendis,Left hand Bat,"Right arm Offbreak, Slow Left arm Orthodox",Unknown
+42116,Himmat Singh,Right hand Bat,Right arm Offbreak,Unknown
+42133,E Malinga,Left hand Bat,Right arm Fast medium,Unknown
+42206,SK Rasheed,Right hand Bat,Legbreak,Unknown
+42220,JP Inglis,Right hand Bat,Unknown,Wicketkeeper
+42226,XC Bartlett,Right hand Bat,Right arm Fast medium,Unknown
+43253,C Bosch,Right hand Bat,Right arm Fast medium,Unknown
+43282,JG Bethell,Left hand Bat,Slow Left arm Orthodox,Unknown
+43300,Karim Janat,Right hand Bat,Right arm Medium,Unknown
+43451,KS Rathore,Left hand Bat,Unknown,Wicketkeeper
+43548,Urvil Patel,Right hand Bat,Unknown,Wicketkeeper
+43574,M Tiwari,Right hand Bat,Right arm Medium fast,Unknown
+43582,MJ Owen,Right hand Bat,Unknown,Right arm Medium
+43638,W O'Rourke,Right hand Bat,Right arm Fast,Right arm Fast
+43649,Harsh Dubey,Left hand Bat,Slow Left arm Orthodox,Unknown
+43820,MP Breetzke,Right hand Bat,Unknown,Wicketkeeper
+43849,Musheer Khan,Right hand Bat,Slow Left arm Orthodox,Unknown
+43881,BKG Mendis,Right hand Bat,Legbreak,Unknown
+43954,Sediqullah Atal,Left hand Bat,Unknown,Unknown
+3388,Arshdeep Singh,Left hand Bat,Left arm Medium fast, 
+34356,DAJ Bracewell,Right hand Bat,Right arm Fast medium, 
+1970,AD Hales,Right hand Bat,Right arm Medium,Occasional Wicketkeeper
+161,DT Christian,Right hand Bat,Right arm Fast medium, 
+12414,YV Takawale,Right hand Bat, ,Wicketkeeper
+62,CR Woakes,Right hand Bat,Right arm Fast medium, 
+77,T Natarajan,Left hand Bat,Left arm Medium, 
+5354,KA Jamieson,Right hand Bat,Right arm Fast medium, 
+13231,KP Pietersen,Right hand Bat,Right arm Offbreak, 
+11948,Joginder Sharma,Right hand Bat,Right arm Fast medium, 
+13220,T Henderson,Right hand Bat,Right arm Fast medium, 
+15837,UBT Chand,Right hand Bat,Right arm Offbreak, 
+12008,Y Venugopal Rao,Right hand Bat,Right arm Offbreak, 
+471,NM Coulter-Nile,Right hand Bat,Right arm Fast, 
+34706,T Mishra,Right hand Bat,Right arm Fast medium, 
+14481,AG Murtaza,Left hand Bat,Slow Left arm Orthodox, 
+3718,S Sandeep Warrier,Right hand Bat,Right arm Medium, 
+8626,WD Parnell,Left hand Bat,Left arm Medium fast, 
+546,Gurkeerat Singh,Right hand Bat,Right arm Offbreak, 
+14961,KB Arun Karthik,Right hand Bat,Legbreak Googly,Occasional Wicketkeeper
+12046,Pankaj Singh,Right hand Bat,Right arm Medium fast, 
+245,AB de Villiers,Right hand Bat,Right arm Medium,Wicketkeeper
+4771,CJ Green,Right hand Bat,Right arm Offbreak, 
+48,AJ Finch,Right hand Bat,Slow Left arm Orthodox, 
+9069,D Wiese,Right hand Bat,Right arm Medium fast, 
+4023,JL Pattinson,Left hand Bat,Right arm Fast medium, 
+11935,MV Boucher,Right hand Bat,Right arm Medium,Wicketkeeper
+34171,RW Price,Right hand Bat,Slow Left arm Orthodox, 
+13026,A Mukund,Left hand Bat,Legbreak Googly, 
+6717,OF Smith,Right hand Bat,Right arm Fast medium, 
+767,Anureet Singh,Right hand Bat,Right arm Medium, 
+35146,BB Samantray,Right hand Bat,Right arm Medium, 
+39661,GS Sandhu,Left hand Bat,Right arm Fast medium, 
+1452,B Laughlin,Right hand Bat,Right arm Fast medium, 
+14520,RS Gavaskar,Left hand Bat,Slow Left arm Orthodox, 
+2703,Navdeep Saini,Right hand Bat,Right arm Fast,Unknown
+10152,Azmatullah Omarzai,Right hand Bat,Right arm Medium fast,Unknown
+10528,Kumar Kushagra,Right hand Bat,Unknown,Wicketkeeper
+11640,Shivam Singh,Right hand Bat,Right arm Offbreak,Unknown
+10456,Ashutosh Sharma,Right hand Bat,Unknown,Unknown
+10302,MP Yadav,Right hand Bat,Right arm Fast,Unknown
+10303,M Siddharth,Right hand Bat,Slow Left arm Orthodox,Unknown
+10548,BR Sharath,Right hand Bat,Unknown,Wicketkeeper
+11562,T Kohler-Cadmore,Right hand Bat,Right arm Offbreak,Wicketkeeper
+11810,PVSN Raju,Left hand Bat,Right arm Medium fast,Unknown
+11833,DS Rathi,Right hand Bat,Legbreak,Unknown
+42511,MS Bhandage,Left hand Bat,Right arm Medium fast,Unknown
+42566,V Suryavanshi,Left hand Bat,Slow Left arm Orthodox,Unknown
+42603,A Mhatre,Right hand Bat,Right arm Offbreak,Unknown
+38,MS Dhoni,Right hand Bat,Right arm Medium,Wicketkeeper
+38515,K Santokie,Left hand Bat,Left arm Medium, 
+15049,C Ganapathy,Right hand Bat,Right arm Medium, 
+6715,RA Bawa,Left hand Bat,Right arm Medium fast, 
+318,UT Yadav,Right hand Bat,Right arm Fast, 
+16414,KMDN Kulasekara,Right hand Bat,Right arm Fast medium, 
+37,BA Stokes,Left hand Bat,Right arm Fast medium, 
+1986,MK Lomror,Left hand Bat,Slow Left arm Orthodox, 
+6212,T Shamsi,Right hand Bat,Left arm Wrist spin, 
+3505,SE Rutherford,Left hand Bat,Right arm Fast medium, 
+34817,Azhar Mahmood,Right hand Bat,Right arm Fast medium, 
+4146,TU Deshpande,Left hand Bat,Right arm Medium, 
+11987,DJ Thornely,Right hand Bat,"Right arm Medium, Right arm Offbreak", 
+11928,M Kartik,Left hand Bat,Slow Left arm Orthodox, 
+297,Mustafizur Rahman,Left hand Bat,Left arm Fast medium, 
+8400,RJW Topley,Right hand Bat,Left arm Fast medium, 
+13458,KP Appanna,Right hand Bat,Slow Left arm Orthodox, 
+6245,NT Ellis,Right hand Bat,Right arm Fast medium, 
+1416,R Ashwin,Right hand Bat,Right arm Offbreak, 
+7947,T Stubbs,Right hand Bat,Right arm Offbreak,Wicketkeeper
+1443,DJM Short,Left hand Bat,Left arm Wrist spin, 
+811,IK Pathan,Left hand Bat,Left arm Medium fast, 
+634,AD Nath,Right hand Bat,Right arm Medium fast, 
+14485,AA Jhunjhunwala,Right hand Bat,Right arm Offbreak, 
+180,SV Samson,Right hand Bat, ,Wicketkeeper
+12221,TM Srivastava,Left hand Bat,Right arm Medium, 
+6036,Akash Singh,Right hand Bat,Left arm Medium fast, 
+35030,R Shukla,Right hand Bat,Right arm Medium, 
+12160,A Kumble,Right hand Bat,Legbreak Googly, 
+12035,S Sohal,Right hand Bat,Legbreak, 
+16007,JJ van der Wath,Right hand Bat,Right arm Medium fast, 
+13882,GJ Bailey,Right hand Bat,Right arm Medium, 
+2719,JM Bairstow,Right hand Bat,Right arm Medium,Wicketkeeper
+66,TA Boult,Right hand Bat,Left arm Fast medium, 
+258,CJ Anderson,Left hand Bat,Left arm Medium fast, 
+7036,Ramandeep Singh,Right hand Bat,Right arm Medium, 
+24,JC Buttler,Right hand Bat, ,Wicketkeeper
+35239,BW Hilfenhaus,Right hand Bat,Right arm Fast medium, 
+5955,DJ Malan,Left hand Bat,Legbreak, 
+12107,GC Smith,Left hand Bat,Right arm Offbreak, 
+438,JD Unadkat,Right hand Bat,Left arm Medium, 
+2947,MJ Santner,Left hand Bat,Slow Left arm Orthodox, 
+348,RA Jadeja,Left hand Bat,Slow Left arm Orthodox, 
+16529,M Klinger,Right hand Bat, , 
+12193,DNT Zoysa,Left hand Bat,Left arm Fast medium, 
+35322,PA Reddy,Right hand Bat,Legbreak, 
+13271,FH Edwards,Right hand Bat,Right arm Fast, 
+14353,Mohammad Ashraful,Right hand Bat,"Right arm Offbreak, Legbreak", 
+12315,Salman Butt,Left hand Bat,Right arm Offbreak, 
+9044,Abdul Basith,Right hand Bat,Right arm Offbreak, 
+4274,JDS Neesham,Left hand Bat,Right arm Medium fast, 
+11942,ML Hayden,Left hand Bat,Right arm Medium, 
+637,SS Agarwal,Right hand Bat,Legbreak Googly, 
+33,JJ Bumrah,Right hand Bat,Right arm Fast, 
+34931,A Chandila,Right hand Bat,Right arm Offbreak, 
+697,DM Bravo,Left hand Bat,Right arm Medium,Occasional Wicketkeeper
+7077,HE van der Dussen,Right hand Bat,Legbreak, 
+2934,P Ray Barman,Right hand Bat,Legbreak Googly, 
+2760,Rasikh Salam,Right hand Bat,Right arm Medium, 
+14729,AC Voges,Right hand Bat,Slow Left arm Orthodox, 
+1436,RK Singh,Left hand Bat,Right arm Offbreak, 
+1421,Q de Kock,Left hand Bat, ,Wicketkeeper
+12523,L Balaji,Right hand Bat,Right arm Medium fast, 
+6999,B Sai Sudharsan,Left hand Bat,Legbreak, 
+5980,PWH de Silva,Right hand Bat,Legbreak, 
+11990,AM Nayar,Left hand Bat,Right arm Medium, 
+14505,MS Bisla,Right hand Bat, ,Wicketkeeper
+12009,VVS Laxman,Right hand Bat,Right arm Offbreak, 
+6795,D Pretorius,Right hand Bat,Right arm Medium fast, 
+38322,VH Zol,Left hand Bat,Right arm Offbreak, 
+12093,VS Yeligati,Right hand Bat,Right arm Offbreak, 
+5408,JA Richardson,Right hand Bat,Right arm Fast, 
+4071,D Padikkal,Left hand Bat,Right arm Offbreak, 
+15507,AG Paunikar,Right hand Bat, ,Wicketkeeper
+11985,L Ronchi,Right hand Bat, ,Wicketkeeper
+34,AM Rahane,Right hand Bat,Right arm Medium, 
+13402,RR Bose,Right hand Bat,Right arm Fast medium, 
+36213,R Rampaul,Left hand Bat,Right arm Fast medium, 
+12535,A Chopra,Right hand Bat,"Right arm Medium, Right arm Offbreak", 
+11930,R Dravid,Right hand Bat,Right arm Offbreak,Occasional Wicketkeeper
+13973,C Nanda,Right hand Bat,Legbreak, 
+4099,Abdul Samad,Right hand Bat,Legbreak, 
+3284,LS Livingstone,Right hand Bat,"Right arm Offbreak, Legbreak", 
+7365,HR Shokeen,Right hand Bat,Right arm Offbreak, 
+7172,Yash Dayal,Right hand Bat,Left arm Medium fast, 
+38691,Karanveer Singh,Right hand Bat,Legbreak Googly, 
+15472,C Madan,Right hand Bat, ,Wicketkeeper
+10,YS Chahal,Right hand Bat,Legbreak Googly, 
+16382,JE Taylor,Right hand Bat,Right arm Fast, 
+11931,W Jaffer,Right hand Bat,Right arm Offbreak, 
+14,MC Henriques,Right hand Bat,Right arm Fast medium, 
+11936,B Akhil,Right hand Bat,Right arm Medium fast, 
+1120,MJ Henry,Right hand Bat,Right arm Fast medium, 
+64,Kuldeep Yadav,Left hand Bat,Left arm Wrist spin, 
+11975,V Sehwag,Right hand Bat,Right arm Offbreak, 
+12017,PP Ojha,Left hand Bat,Slow Left arm Orthodox, 
+8356,NA Saini,Right hand Bat,Right arm Fast, 
+12345,M Ntini,Right hand Bat,Right arm Fast, 
+18,NV Ojha,Right hand Bat, ,Wicketkeeper
+34272,RE Levi,Right hand Bat,Right arm Medium, 
+14478,R McLaren,Left hand Bat,Right arm Medium fast, 
+15745,ND Doshi,Right hand Bat,Slow Left arm Orthodox, 
+26,N Rana,Left hand Bat,"Right arm Medium, Right arm Offbreak, Legbreak", 
+12795,RV Pawar,Left hand Bat,Slow Left arm Orthodox, 
+8425,Yash Thakur,Right hand Bat,Right arm Fast medium, 
+13698,SM Harwood,Right hand Bat,Right arm Fast medium, 
+1,CH Gayle,Left hand Bat,Right arm Offbreak, 
+11962,S Sreesanth,Right hand Bat,Right arm Fast medium, 
+15807,AL Menaria,Left hand Bat,Slow Left arm Orthodox, 
+2023,KM Asif,Right hand Bat,Right arm Medium, 
+2766,N Pooran,Left hand Bat,Right arm Offbreak,Wicketkeeper
+8953,Mayank Dagar,Right hand Bat,Slow Left arm Orthodox, 
+9748,MD Shanaka,Right hand Bat,Right arm Medium, 
+267,F du Plessis,Right hand Bat,Legbreak, 
+13320,Yashpal Singh,Right hand Bat,Right arm Medium, 
+13228,JD Ryder,Left hand Bat,Right arm Medium, 
+2768,SM Curran,Left hand Bat,Left arm Medium fast, 
+1630,M Vijay,Right hand Bat,Right arm Offbreak, 
+36227,SMSM Senanayake,Right hand Bat,Right arm Offbreak, 
+1398,C Munro,Left hand Bat,Right arm Medium fast, 
+12314,Gagandeep Singh,Right hand Bat,Right arm Medium fast, 
+34058,S Rana,Right hand Bat,Right arm Medium fast, 
+8,S Aravind,Left hand Bat,Left arm Medium fast, 
+341,S Badree,Right hand Bat,Legbreak, 
+14278,AB McDonald,Right hand Bat,Right arm Fast medium, 
+184,PJ Cummins,Right hand Bat,Right arm Fast, 
+4078,I Udana,Right hand Bat,Left arm Medium fast, 
+1998,M Ashwin,Right hand Bat,Legbreak Googly, 
+13203,T Thushara,Left hand Bat,Left arm Fast medium, 
+14649,DR Martyn,Right hand Bat,Right arm Medium, 
+11998,LRPL Taylor,Right hand Bat,Right arm Offbreak, 
+12765,PM Sarvesh Kumar,Right hand Bat,Right arm Medium, 
+8312,Sikandar Raza,Right hand Bat,Right arm Offbreak, 
+12842,Abdur Razzak,Left hand Bat,Slow Left arm Orthodox, 
+7005,DG Nalkande,Right hand Bat,Right arm Fast medium, 
+16296,J Syed Mohammad,Left hand Bat,Slow Left arm Orthodox, 
+2745,KMA Paul,Right hand Bat,Right arm Fast medium, 
+14873,NLTC Perera,Left hand Bat,Right arm Medium fast, 
+6727,A Badoni,Right hand Bat,Right arm Offbreak, 
+1471,TK Curran,Right hand Bat,Right arm Fast medium, 
+14454,Anirudh Singh,Left hand Bat,Right arm Medium, 
+3793,J Suchith,Left hand Bat,Slow Left arm Orthodox, 
+1581,Shivam Mavi,Right hand Bat,Right arm Fast medium, 
+57,CA Lynn,Right hand Bat,Slow Left arm Orthodox, 
+5986,VR Iyer,Left hand Bat,Right arm Medium, 
+12369,DP Vijaykumar,Right hand Bat,Right arm Medium, 
+178,SW Billings,Right hand Bat, ,Wicketkeeper
+33963,Y Gnaneswara Rao,Right hand Bat,Right arm Medium, 
+3641,O Thomas,Left hand Bat,Right arm Fast, 
+7476,R Dhawan,Right hand Bat,Right arm Medium fast, 
+15867,BA Bhatt,Left hand Bat,Slow Left arm Orthodox, 
+6550,TH David,Right hand Bat,Right arm Offbreak, 
+12269,CRD Fernando,Right hand Bat,Right arm Fast medium, 
+16009,R Ninan,Right hand Bat,Right arm Offbreak, 
+11,A Choudhary,Right hand Bat,Left arm Medium, 
+3100,AS Joseph,Right hand Bat,Right arm Fast, 
+6944,D Brevis,Right hand Bat,Legbreak, 
+14303,CK Langeveldt,Right hand Bat,Right arm Fast medium, 
+14707,AB Barath,Right hand Bat,Right arm Offbreak, 
+2138,DR Shorey,Right hand Bat,Right arm Offbreak, 
+753,SP Jackson,Right hand Bat, ,Wicketkeeper
+2,Mandeep Singh,Right hand Bat,Right arm Medium, 
+11956,SM Katich,Left hand Bat,Left arm Wrist spin, 
+538,Mohammed Siraj,Right hand Bat,Right arm Fast, 
+12234,JA Morkel,Left hand Bat,Right arm Medium fast, 
+50,DR Smith,Right hand Bat,Right arm Medium, 
+13,S Dhawan,Left hand Bat,Right arm Offbreak, 
+71,GJ Maxwell,Right hand Bat,Right arm Offbreak, 
+36973,UA Birla,Right hand Bat,Right arm Medium, 
+316,C de Grandhomme,Right hand Bat,Right arm Medium fast, 
+8646,YV Dhull,Right hand Bat,Right arm Offbreak, 
+34522,GB Hogg,Left hand Bat,Left arm Wrist spin, 
+8776,Harpreet Singh,Left hand Bat,Right arm Medium, 
+12546,J Arunkumar,Right hand Bat,Right arm Offbreak, 
+14712,SJ Srivastava,Right hand Bat,Left arm Fast medium, 
+8082,R Sanjay Yadav,Left hand Bat,Slow Left arm Orthodox, 
+15150,SB Wagh,Left hand Bat,Left arm Medium fast, 
+179,KK Nair,Right hand Bat,Right arm Offbreak, 
+228,Harbhajan Singh,Right hand Bat,Right arm Offbreak, 
+1035,LMP Simmons,Right hand Bat,Right arm Medium fast,Occasional Wicketkeeper
+13502,Shoaib Ahmed,Right hand Bat,Right arm Fast medium, 
+13763,D du Preez,Right hand Bat,Right arm Fast medium, 
+3393,AJ Turner,Right hand Bat,Right arm Offbreak, 
+15818,RV Gomez,Right hand Bat,Right arm Medium, 
+389,SS Iyer,Right hand Bat,"Right arm Offbreak, Legbreak Googly", 
+12007,AC Gilchrist,Left hand Bat,Right arm Offbreak,Wicketkeeper
+1377,E Lewis,Left hand Bat, , 
+4058,SS Cottrell,Right hand Bat,Left arm Fast medium, 
+37119,Parvez Rasool,Right hand Bat,Right arm Offbreak, 
+1419,Mujeeb Ur Rahman,Right hand Bat,Right arm Offbreak, 
+12010,A Symonds,Right hand Bat,"Right arm Medium, Right arm Offbreak", 
+13267,Harmeet Singh,Right hand Bat,Right arm Medium, 
+3246,JL Denly,Right hand Bat,Legbreak, 
+13250,RS Bopara,Right hand Bat,Right arm Medium, 
+613,Washington Sundar,Left hand Bat,Right arm Offbreak, 
+7024,Shashank Singh,Right hand Bat,"Right arm Medium, Right arm Offbreak", 
+4047,A Nortje,Right hand Bat,Right arm Fast, 
+1559,A Dananjaya,Left hand Bat,"Right arm Offbreak, Legbreak", 
+495,S Kaul,Right hand Bat,Right arm Medium, 
+1580,Shubman Gill,Right hand Bat,Right arm Offbreak, 
+34089,KH Devdhar,Right hand Bat, ,Wicketkeeper
+1409,KL Rahul,Right hand Bat, ,Wicketkeeper
+34304,M de Lange,Right hand Bat,Right arm Fast, 
+11961,WA Mota,Right hand Bat,Right arm Medium, 
+51,MS Gony,Right hand Bat,Right arm Medium, 
+36609,X Thalaivan Sargunam,Right hand Bat,Right arm Offbreak, 
+13198,A Flintoff,Right hand Bat,Right arm Fast medium, 
+3076,SC Kuggeleijn,Right hand Bat,Right arm Fast medium, 
+219,AS Rajpoot,Right hand Bat,Right arm Medium, 
+230,SL Malinga,Right hand Bat,Right arm Fast, 
+1386,M Markande,Right hand Bat,Legbreak, 
+75,MM Sharma,Right hand Bat,Right arm Medium, 
+12014,SB Bangar,Right hand Bat,Right arm Medium fast, 
+12147,Sohail Tanvir,Left hand Bat,Left arm Medium fast, 
+37979,BR Dunk,Left hand Bat,Right arm Offbreak,Wicketkeeper
+308,I Sharma,Right hand Bat,Right arm Fast medium, 
+9371,Akash Madhwal,Right hand Bat,Right arm Medium fast, 
+40813,SM Boland,Right hand Bat,Right arm Fast medium, 
+9931,H Sharma,Right hand Bat,Legbreak, 
+13497,AA Bilakhia,Right hand Bat,Right arm Medium, 
+35153,MJ Clarke,Right hand Bat,Slow Left arm Orthodox, 
+8372,HC Brook,Right hand Bat,Right arm Medium, 
+11919,SC Ganguly,Left hand Bat,Right arm Medium, 
+4,KM Jadhav,Right hand Bat,Right arm Offbreak, 
+29,KA Pollard,Right hand Bat,Right arm Medium, 
+6713,PBB Rajapaksa,Left hand Bat,Right arm Medium, 
+14622,SE Bond,Right hand Bat,Right arm Fast, 
+2329,JPR Scantlebury-Searles,Right hand Bat,Right arm Fast medium, 
+172,P Negi,Left hand Bat,Slow Left arm Orthodox, 
+12032,DPMD Jayawardene,Right hand Bat,Right arm Medium, 
+604,MG Johnson,Left hand Bat,Left arm Fast, 
+12738,RR Powar,Right hand Bat,Right arm Offbreak, 
+14726,FY Fazal,Left hand Bat,Right arm Medium, 
+11951,M Muralitharan,Right hand Bat,Right arm Offbreak, 
+6880,JM Sharma,Right hand Bat, ,Wicketkeeper
+12465,DT Patil,Right hand Bat, ,Wicketkeeper
+11953,JR Hopes,Right hand Bat,Right arm Medium, 
+6885,VG Arora,Right hand Bat,Right arm Fast medium, 
+9225,AJ Hosein,Left hand Bat,Slow Left arm Orthodox, 
+16862,CJ Ferguson,Right hand Bat,Right arm Medium, 
+14985,KAJ Roach,Right hand Bat,Right arm Fast medium, 
+400,EJG Morgan,Left hand Bat,Right arm Medium,Occasional Wicketkeeper
