@@ -91,10 +91,39 @@ ACTIVE_TEAMS = [
 @st.cache_data
 def load_data():
     try:
-        matches = pd.read_csv('ipl_matches_data_cleaned.csv')
-        teams = pd.read_csv('teams_data_cleaned.csv')
-        players = pd.read_csv('players_data_cleaned.csv')
-        deliveries = pd.read_csv('cleaned_ball_by_ball_data.csv') 
+        # Get the directory of the current script
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        
+        # List of files to load
+        files = {
+            'matches': 'ipl_matches_data_cleaned.csv',
+            'teams': 'teams_data_cleaned.csv',
+            'players': 'players_data_cleaned.csv',
+            'deliveries': 'cleaned_ball_by_ball_data.csv'
+        }
+        
+        # Try loading from script directory first
+        data_dict = {}
+        for key, filename in files.items():
+            filepath = os.path.join(script_dir, filename)
+            if os.path.exists(filepath):
+                data_dict[key] = filepath
+            else:
+                # Try current working directory
+                if os.path.exists(filename):
+                    data_dict[key] = filename
+                else:
+                    st.warning(f"⚠️ File not found: {filename}")
+                    data_dict[key] = None
+        
+        # Load data
+        matches = pd.read_csv(data_dict['matches']) if data_dict['matches'] else None
+        teams = pd.read_csv(data_dict['teams']) if data_dict['teams'] else None
+        players = pd.read_csv(data_dict['players']) if data_dict['players'] else None
+        deliveries = pd.read_csv(data_dict['deliveries']) if data_dict['deliveries'] else None
+        
+        if matches is None:
+            return None, None, None, None
         
         # Preprocess Matches
         data = matches.dropna(subset=['match_winner'])
@@ -102,6 +131,10 @@ def load_data():
         
         return data, teams, players, deliveries
     except FileNotFoundError as e:
+        st.error(f"FileNotFoundError: {e}")
+        return None, None, None, None
+    except Exception as e:
+        st.error(f"Error loading data: {e}")
         return None, None, None, None
 
 # --- 3. Load Pre-trained Model ---
@@ -109,19 +142,46 @@ def load_data():
 def load_trained_model():
     """Load the pre-trained model and encoders from disk"""
     try:
-        models_dir = 'trained_models'
+        # Get the directory of the current script
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        models_dir = os.path.join(script_dir, 'trained_models')
         
-        with open(os.path.join(models_dir, 'ipl_model.pkl'), 'rb') as f:
+        # Try current directory if script_dir doesn't work
+        if not os.path.exists(models_dir):
+            models_dir = 'trained_models'
+        
+        # Debug: Check if directory exists
+        if not os.path.exists(models_dir):
+            st.error(f"⚠️ Model directory not found at: {models_dir}")
+            st.write(f"Current working directory: {os.getcwd()}")
+            st.write(f"Script directory: {script_dir}")
+            st.write(f"Available directories: {os.listdir('.')}")
+            return None, None, None
+        
+        model_path = os.path.join(models_dir, 'ipl_model.pkl')
+        encoders_path = os.path.join(models_dir, 'ipl_encoders.pkl')
+        metadata_path = os.path.join(models_dir, 'model_metadata.pkl')
+        
+        # Check if files exist
+        if not os.path.exists(model_path):
+            st.error(f"Model file not found: {model_path}")
+            return None, None, None
+        
+        with open(model_path, 'rb') as f:
             model = pickle.load(f)
         
-        with open(os.path.join(models_dir, 'ipl_encoders.pkl'), 'rb') as f:
+        with open(encoders_path, 'rb') as f:
             encoders = pickle.load(f)
         
-        with open(os.path.join(models_dir, 'model_metadata.pkl'), 'rb') as f:
+        with open(metadata_path, 'rb') as f:
             metadata = pickle.load(f)
         
         return model, encoders, metadata
-    except FileNotFoundError:
+    except FileNotFoundError as e:
+        st.error(f"FileNotFoundError: {e}")
+        return None, None, None
+    except Exception as e:
+        st.error(f"Error loading model: {e}")
         return None, None, None
 
 # --- 4. Helpers ---
