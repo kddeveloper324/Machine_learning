@@ -3,6 +3,11 @@ import pandas as pd
 import numpy as np
 import pickle
 import os
+import warnings
+
+# --- Suppress Warnings ---
+# This prevents sklearn version warnings from appearing in the console
+warnings.filterwarnings("ignore")
 
 # --- 1. Configuration & Assets ---
 st.set_page_config(page_title="IPL Match Prediction", page_icon="🏏", layout="wide")
@@ -19,41 +24,206 @@ page_bg_img = """
     background-attachment: fixed;
 }
 
-/* General Text Visibility - Targeted to avoid breaking widgets */
-h1, h2, h3, h4, h5, h6, p, label, .stMarkdown {
+/* Add semi-transparent overlay for better text readability */
+.stApp::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Main headings - White with subtle shadow for readability */
+h1, h2, h3 {
     color: #ffffff !important;
-    text-shadow: 2px 2px 4px #000000;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7) !important;
+    font-weight: 700 !important;
 }
 
-/* Fix for Dropdown (Selectbox) Input Field */
+/* Paragraph text - Readable white */
+p, label {
+    color: #f0f0f0 !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+    font-size: 16px !important;
+}
+
+/* Subheader text */
+.stSubheader {
+    color: #ffffff !important;
+}
+
+/* --- DROPDOWN (SELECTBOX) STYLING FIXES --- */
+
+/* 1. Reset background for the main selectbox container */
+.stSelectbox div[data-baseweb="select"] {
+    background-color: #ffffff !important;
+    border-radius: 8px !important;
+    border: 2px solid #667eea !important;
+}
+
+/* 2. FORCE BLACK TEXT for the selected value container */
 .stSelectbox div[data-baseweb="select"] > div {
-    background-color: rgba(255, 255, 255, 0.95) !important;
-    color: black !important;
-    border-radius: 5px;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
 }
 
-/* Fix for Dropdown Menu Options (The list that pops up) */
-div[data-baseweb="popover"] {
-    background-color: white !important;
+/* 3. Deep selector to ensure the specific text node is black (overriding global white text) */
+.stSelectbox div[data-baseweb="select"] div {
+    color: #000000 !important;
+    -webkit-text-fill-color: #000000 !important; /* Webkit override */
 }
-div[data-baseweb="popover"] div, div[data-baseweb="popover"] span, div[data-baseweb="menu"] li {
-    color: black !important;
-    text-shadow: none !important; /* Remove shadow for clean read */
+
+/* 4. Fix the SVG icon (arrow) color */
+.stSelectbox div[data-baseweb="select"] svg {
+    fill: #000000 !important;
+    color: #000000 !important;
+}
+
+/* Selectbox text when opened */
+.stSelectbox [role="combobox"] {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+}
+
+/* Selectbox input text - make it bold and dark */
+input[type="text"], 
+div[contenteditable="true"],
+.stSelectbox [role="button"] {
+    color: #000000 !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+}
+
+/* Dropdown menu options - Clear and readable */
+div[data-baseweb="popover"] {
+    background-color: #ffffff !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5) !important;
+    border: 2px solid #667eea !important;
+}
+
+div[data-baseweb="popover"] li, 
+div[data-baseweb="popover"] div[role="option"],
+div[role="listbox"] li,
+li[data-baseweb="menu-item"] {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+    padding: 12px 14px !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+}
+
+div[data-baseweb="popover"] li:hover,
+li[data-baseweb="menu-item"]:hover {
+    background-color: #e8f0ff !important;
+    color: #667eea !important;
+    font-weight: 700 !important;
+}
+
+/* Menu - Ensure options are readable */
+div[data-baseweb="menu"] li {
+    color: #000000 !important;
+    background-color: #ffffff !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    padding: 12px 14px !important;
+}
+
+div[data-baseweb="menu"] li:hover {
+    background-color: #e8f0ff !important;
+    color: #667eea !important;
+}
+
+/* Radio button labels */
+.stRadio label {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
+}
+
+.stRadio > div {
+    color: #ffffff !important;
+}
+
+/* Radio button options - text visibility */
+.stRadio span {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.6) !important;
 }
 
 /* Fix for Team Logos - Add a backing card so they pop */
 div[data-testid="stImage"] img {
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white backing */
-    padding: 10px;
-    border-radius: 12px; /* Rounded corners */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    background-color: rgba(255, 255, 255, 0.85) !important;
+    padding: 10px !important;
+    border-radius: 12px !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4) !important;
 }
 
 /* Style Expander Headers */
 div[data-testid="stExpander"] {
-    background-color: rgba(0, 0, 0, 0.6);
-    border-radius: 10px;
-    color: white;
+    background-color: rgba(20, 20, 50, 0.8) !important;
+    border-radius: 8px !important;
+    border: 1px solid rgba(102, 126, 234, 0.3) !important;
+}
+
+div[data-testid="stExpander"] > button {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
+
+/* Success/Info/Warning boxes */
+.stSuccess, .stInfo, .stWarning {
+    background-color: rgba(50, 50, 50, 0.9) !important;
+    color: #ffffff !important;
+}
+
+/* Better button styling */
+.stButton > button {
+    background-color: #667eea !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    font-size: 16px !important;
+    padding: 10px 20px !important;
+    border-radius: 6px !important;
+}
+
+.stButton > button:hover {
+    background-color: #764ba2 !important;
+}
+
+/* Sidebar styling */
+.stSidebar {
+    background-color: rgba(30, 30, 60, 0.95) !important;
+}
+
+.stSidebar > div {
+    background-color: rgba(30, 30, 60, 0.95) !important;
+}
+
+/* Text in sidebar */
+.stSidebar p, .stSidebar label {
+    color: #ffffff !important;
+}
+
+/* Divider styling */
+.stHorizontalBlock > hr {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* Better contrast for all text */
+* {
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
 }
 </style>
 """
@@ -130,6 +300,10 @@ def load_trained_model():
         
         with open(os.path.join(models_dir, 'ipl_model.pkl'), 'rb') as f:
             model = pickle.load(f)
+            
+        # Try to suppress verbosity in the loaded model if possible
+        if hasattr(model, 'verbose'):
+            model.verbose = 0
         
         with open(os.path.join(models_dir, 'ipl_encoders.pkl'), 'rb') as f:
             encoders = pickle.load(f)
@@ -221,136 +395,137 @@ st.subheader("Select Teams")
 col1, col_vs, col2 = st.columns([4, 1, 4])
 
 with col1:
-    default_index_1 = ACTIVE_TEAMS.index('Mumbai Indians') if 'Mumbai Indians' in ACTIVE_TEAMS else 0
-    team1 = st.selectbox("Home Team", ACTIVE_TEAMS, index=default_index_1)
+    st.markdown("<p style='color: #ffffff; font-weight: 700; text-shadow: 1px 1px 3px #000; font-size: 16px;'>🏠 Home Team</p>", unsafe_allow_html=True)
+    # CHANGED: Default index set to 5 for Mumbai Indians
+    default_index_1 = 5
+    team1 = st.selectbox("Home Team", ACTIVE_TEAMS, index=default_index_1, label_visibility="collapsed", key="team1_select")
     
     c1_logo, c1_text = st.columns([1, 3])
     with c1_logo:
         if team1 in TEAM_LOGOS:
             st.image(TEAM_LOGOS[team1], width=80)
     with c1_text:
-        st.markdown(f"### {team1}")
+        st.markdown(f"<h3 style='color: #ffffff; text-shadow: 1px 1px 3px #000;'>{team1}</h3>", unsafe_allow_html=True)
 
 with col_vs:
-    st.markdown("<h1 style='text-align: center; padding-top: 20px;'>VS</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center; padding-top: 20px; color: #ffffff; text-shadow: 2px 2px 5px #000;'>VS</h1>", unsafe_allow_html=True)
 
 with col2:
-    default_index_2 = ACTIVE_TEAMS.index('Chennai Super Kings') if 'Chennai Super Kings' in ACTIVE_TEAMS else 1
-    team2 = st.selectbox("Away Team", ACTIVE_TEAMS, index=default_index_2)
+    st.markdown("<p style='color: #ffffff; font-weight: 700; text-shadow: 1px 1px 3px #000; font-size: 16px;'>🏟️ Away Team</p>", unsafe_allow_html=True)
+    default_index_2 = 1 if len(ACTIVE_TEAMS) > 1 else 0
+    team2 = st.selectbox("Away Team", ACTIVE_TEAMS, index=default_index_2, label_visibility="collapsed", key="team2_select")
     
     c2_logo, c2_text = st.columns([1, 3])
     with c2_logo:
         if team2 in TEAM_LOGOS:
-             st.image(TEAM_LOGOS[team2], width=80)
+            st.image(TEAM_LOGOS[team2], width=80)
     with c2_text:
-        st.markdown(f"### {team2}")
+        st.markdown(f"<h3 style='color: #ffffff; text-shadow: 1px 1px 3px #000;'>{team2}</h3>", unsafe_allow_html=True)
 
 st.divider()
 
 # --- Match Conditions ---
 st.subheader("Match Conditions")
 c1, c2, c3 = st.columns(3)
+
 with c1:
-    venue = st.selectbox("Match Venue", encoders['venue'].classes_)
+    st.markdown("<p style='color: #ffffff; font-weight: 700; text-shadow: 1px 1px 3px #000; font-size: 15px;'>🏟️ Match Venue</p>", unsafe_allow_html=True)
+    venue_list = sorted(list(encoders['venue'].classes_))
+    venue = st.selectbox("Match Venue", venue_list, label_visibility="collapsed", key="venue_select")
+
 with c2:
-    toss_winner = st.selectbox("Toss Winner", [team1, team2])
+    st.markdown("<p style='color: #ffffff; font-weight: 700; text-shadow: 1px 1px 3px #000; font-size: 15px;'>🪙 Toss Winner</p>", unsafe_allow_html=True)
+    toss_list = [team1, team2]
+    toss_winner = st.selectbox("Toss Winner", toss_list, label_visibility="collapsed", key="toss_select")
+
 with c3:
-    toss_decision = st.radio("Toss Decision", ["field", "bat"])
+    st.markdown("<p style='color: #ffffff; font-weight: 700; text-shadow: 1px 1px 3px #000; font-size: 15px;'>⚔️ Toss Decision</p>", unsafe_allow_html=True)
+    toss_decision = st.radio("Toss Decision", ["bat", "field"], label_visibility="collapsed", key="decision_select")
 
 # --- Prediction Button ---
 if st.button("🔮 Predict Future Match Outcome", type="primary"):
     
     try:
-        # Create a DataFrame for prediction
-        input_data = pd.DataFrame({
-            'team1': [encoders['team1'].transform([team1])[0]],
-            'team2': [encoders['team2'].transform([team2])[0]],
-            'venue': [encoders['venue'].transform([venue])[0]],
-            'toss_winner': [encoders['toss_winner'].transform([toss_winner])[0]],
-            'toss_decision': [encoders['toss_decision'].transform([toss_decision])[0]]
-        })
-        
-        # Get prediction probabilities
-        all_probs = model.predict_proba(input_data)[0]
-        
-        # Create a dictionary mapping Team Name -> Probability
-        team_probs_dict = dict(zip(encoders['match_winner'].classes_, all_probs))
-        
-        # Extract raw probabilities for the two selected teams
-        p1_raw = team_probs_dict.get(team1, 0.0)
-        p2_raw = team_probs_dict.get(team2, 0.0)
-        
-        # Normalize probabilities so they sum to 100% between these two teams
-        total_prob = p1_raw + p2_raw
-        
-        # Handle edge case where model predicts 0 for both (very unlikely)
-        if total_prob == 0:
-            winner_prob = 0.5
-            predicted_winner = team1 # Default fallback
+        # Validate team selection
+        if team1 == team2:
+            st.error("❌ Please select different teams for home and away!")
         else:
-            p1_norm = p1_raw / total_prob
-            p2_norm = p2_raw / total_prob
+            # Create a DataFrame for prediction with proper encoding
+            input_data = pd.DataFrame({
+                'team1': [encoders['team1'].transform([str(team1)])[0]],
+                'team2': [encoders['team2'].transform([str(team2)])[0]],
+                'venue': [encoders['venue'].transform([str(venue)])[0]],
+                'toss_winner': [encoders['toss_winner'].transform([str(toss_winner)])[0]],
+                'toss_decision': [encoders['toss_decision'].transform([str(toss_decision)])[0]]
+            })
             
-            if p1_norm >= p2_norm:
-                predicted_winner = team1
-                winner_prob = p1_norm
-            else:
-                predicted_winner = team2
-                winner_prob = p2_norm
-        
-        # Head-to-Head Stats
-        wins_t1, wins_t2 = get_head_to_head_stats(data, team1, team2)
-
-        # --- Display Prediction ---
-        st.markdown("### Prediction Report")
-        
-        with st.container():
-            r_col1, r_col2 = st.columns([1, 4])
+            # Make prediction
+            prediction = model.predict(input_data)[0]
+            all_probs = model.predict_proba(input_data)[0]
             
-            with r_col1:
-                 if predicted_winner in TEAM_LOGOS:
-                    st.image(TEAM_LOGOS[predicted_winner], width=100)
-                 else:
-                    st.write("🏆")
+            # Create a dictionary mapping Team Name -> Probability
+            team_probs_dict = dict(zip(encoders['match_winner'].classes_, all_probs))
             
-            with r_col2:
-                st.success(f"## 🏆 Predicted Winner: {predicted_winner}")
-                
-                st.write(f"**Model Confidence:** {winner_prob:.1%}")
-                st.progress(int(winner_prob * 100))
-                
-                if winner_prob < 0.55:
-                    st.warning(f"⚠️ **This is a close call!** The model is only {winner_prob:.1%} sure.")
-                elif winner_prob > 0.75:
-                    st.info(f"✅ **Strong Favorite:** Historical data heavily favors {predicted_winner}.")
-                
-                st.write(f"**Head-to-Head History:** {team1} ({wins_t1} wins) - {team2} ({wins_t2} wins)")
+            # Decode prediction
+            predicted_winner = encoders['match_winner'].inverse_transform([prediction])[0]
+            winner_prob = team_probs_dict.get(predicted_winner, 0.5)
+            
+            # Head-to-Head Stats
+            wins_t1, wins_t2 = get_head_to_head_stats(data, team1, team2)
 
-        # --- Impact Analysis ---
-        st.subheader("🧠 Key Players & Team Strength")
-        st.caption("These players have historically been the top performers for their teams.")
-        
-        with st.expander(f"View {team1} Key Players", expanded=True):
-            p_col1, p_col2 = st.columns([1, 4])
-            if team1 in TEAM_LOGOS:
-                p_col1.image(TEAM_LOGOS[team1], width=60)
-            batters, bowlers = get_top_players(team1, deliveries_df)
-            if batters:
-                p_col2.write(f"**🏏 Batting Core:** {', '.join(batters)}")
-                p_col2.write(f"**⚾ Bowling Core:** {', '.join(bowlers)}")
-            else:
-                p_col2.write("No historical player data available.")
+            # --- Display Prediction ---
+            st.markdown("### 🏆 Prediction Report")
+            
+            with st.container():
+                r_col1, r_col2 = st.columns([1, 4])
+                
+                with r_col1:
+                    if predicted_winner in TEAM_LOGOS:
+                        st.image(TEAM_LOGOS[predicted_winner], width=100)
+                    else:
+                        st.write("🏆")
+                
+                with r_col2:
+                    st.success(f"## 🏆 Predicted Winner: {predicted_winner}")
+                    
+                    st.markdown(f"<p style='color: #ffffff; font-size: 16px; font-weight: 600;'>**Model Confidence:** {winner_prob:.1%}</p>", unsafe_allow_html=True)
+                    st.progress(int(winner_prob * 100))
+                    
+                    if winner_prob < 0.55:
+                        st.warning(f"⚠️ **This is a close call!** The model is only {winner_prob:.1%} sure.")
+                    elif winner_prob > 0.75:
+                        st.info(f"✅ **Strong Favorite:** Historical data heavily favors {predicted_winner}.")
+                    
+                    st.markdown(f"<p style='color: #ffffff; font-size: 15px;'><b>Head-to-Head History:</b> {team1} ({wins_t1} wins) - {team2} ({wins_t2} wins)</p>", unsafe_allow_html=True)
 
-        with st.expander(f"View {team2} Key Players", expanded=True):
-            p_col1, p_col2 = st.columns([1, 4])
-            if team2 in TEAM_LOGOS:
-                p_col1.image(TEAM_LOGOS[team2], width=60)
-            batters, bowlers = get_top_players(team2, deliveries_df)
-            if batters:
-                p_col2.write(f"**🏏 Batting Core:** {', '.join(batters)}")
-                p_col2.write(f"**⚾ Bowling Core:** {', '.join(bowlers)}")
-            else:
-                p_col2.write("No historical player data available.")
+            # --- Impact Analysis ---
+            st.subheader("🧠 Key Players & Team Strength")
+            st.markdown("<p style='color: #d0d0d0; font-size: 14px;'>These players have historically been the top performers for their teams.</p>", unsafe_allow_html=True)
+            
+            with st.expander(f"View {team1} Key Players", expanded=True):
+                p_col1, p_col2 = st.columns([1, 4])
+                if team1 in TEAM_LOGOS:
+                    p_col1.image(TEAM_LOGOS[team1], width=60)
+                batters, bowlers = get_top_players(team1, deliveries_df)
+                if batters:
+                    p_col2.markdown(f"<p style='color: #ffffff; font-weight: 600;'>🏏 Batting Core:</p><p style='color: #e0e0e0;'>{', '.join(batters)}</p>", unsafe_allow_html=True)
+                    p_col2.markdown(f"<p style='color: #ffffff; font-weight: 600;'>⚾ Bowling Core:</p><p style='color: #e0e0e0;'>{', '.join(bowlers)}</p>", unsafe_allow_html=True)
+                else:
+                    p_col2.markdown("<p style='color: #b0b0b0;'>No historical player data available.</p>", unsafe_allow_html=True)
 
+            with st.expander(f"View {team2} Key Players", expanded=True):
+                p_col1, p_col2 = st.columns([1, 4])
+                if team2 in TEAM_LOGOS:
+                    p_col1.image(TEAM_LOGOS[team2], width=60)
+                batters, bowlers = get_top_players(team2, deliveries_df)
+                if batters:
+                    p_col2.markdown(f"<p style='color: #ffffff; font-weight: 600;'>🏏 Batting Core:</p><p style='color: #e0e0e0;'>{', '.join(batters)}</p>", unsafe_allow_html=True)
+                    p_col2.markdown(f"<p style='color: #ffffff; font-weight: 600;'>⚾ Bowling Core:</p><p style='color: #e0e0e0;'>{', '.join(bowlers)}</p>", unsafe_allow_html=True)
+                else:
+                    p_col2.markdown("<p style='color: #b0b0b0;'>No historical player data available.</p>", unsafe_allow_html=True)
+
+    except ValueError as e:
+        st.error(f"❌ **Encoding Error:** {str(e)}")
+        st.info("Please ensure all values are properly selected from the dropdowns.")
     except Exception as e:
-        st.error(f"Prediction Error: {e}")
+        st.error(f"❌ **Prediction Error:** {str(e)}")
