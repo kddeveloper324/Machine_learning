@@ -232,13 +232,13 @@ st.markdown(page_bg_img, unsafe_allow_html=True)
 # Team Logo Mapping
 TEAM_LOGOS = {
     'Chennai Super Kings': 'https://upload.wikimedia.org/wikipedia/en/thumb/2/2b/Chennai_Super_Kings_Logo.svg/500px-Chennai_Super_Kings_Logo.svg.png',
-    'Delhi Capitals': 'https://upload.wikimedia.org/wikipedia/en/thumb/2/2f/Delhi_Capitals_Logo.svg/300px-Delhi_Capitals_Logo.svg.png',
     'Gujarat Titans': 'https://upload.wikimedia.org/wikipedia/en/thumb/0/09/Gujarat_Titans_Logo.svg/500px-Gujarat_Titans_Logo.svg.png',
     'Kolkata Knight Riders': 'https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Kolkata_Knight_Riders_Logo.svg/500px-Kolkata_Knight_Riders_Logo.svg.png',
     'Lucknow Super Giants': 'https://upload.wikimedia.org/wikipedia/en/thumb/a/a9/Lucknow_Super_Giants_IPL_Logo.svg/500px-Lucknow_Super_Giants_IPL_Logo.svg.png',
     'Mumbai Indians': 'https://upload.wikimedia.org/wikipedia/en/thumb/c/cd/Mumbai_Indians_Logo.svg/500px-Mumbai_Indians_Logo.svg.png',
     'Punjab Kings': 'https://upload.wikimedia.org/wikipedia/en/thumb/d/d4/Punjab_Kings_Logo.svg/500px-Punjab_Kings_Logo.svg.png',
     'Rajasthan Royals': 'https://upload.wikimedia.org/wikipedia/en/thumb/6/60/Rajasthan_Royals_Logo.svg/300px-Rajasthan_Royals_Logo.svg.png',
+    'Delhi Capitals': 'https://upload.wikimedia.org/wikipedia/en/thumb/2/2f/Delhi_Capitals_Logo.svg/300px-Delhi_Capitals_Logo.svg.png',
     'Royal Challengers Bangalore': 'https://upload.wikimedia.org/wikipedia/en/thumb/4/4e/Royal_Challengers_Bengaluru_Logo.svg/300px-Royal_Challengers_Bengaluru_Logo.svg.png',
     'Sunrisers Hyderabad': 'https://upload.wikimedia.org/wikipedia/en/thumb/8/81/Sunrisers_Hyderabad.svg/300px-Sunrisers_Hyderabad.svg.png'
 }
@@ -246,13 +246,14 @@ TEAM_LOGOS = {
 # Active Teams List
 ACTIVE_TEAMS = [
     'Chennai Super Kings',
-    'Delhi Capitals',
+    
     'Gujarat Titans',
     'Kolkata Knight Riders',
     'Lucknow Super Giants',
     'Mumbai Indians',
     'Punjab Kings',
     'Rajasthan Royals',
+    'Delhi Capitals',
     'Royal Challengers Bangalore',
     'Sunrisers Hyderabad'
 ]
