@@ -109,7 +109,24 @@ def load_data():
 def load_trained_model():
     """Load the pre-trained model and encoders from disk"""
     try:
-        models_dir = 'trained_models'
+        # Try multiple possible locations for the model files
+        possible_paths = [
+            'trained_models',  # Local directory (expected)
+            './trained_models',  # Current directory
+            '../trained_models',  # Parent directory
+            os.path.expanduser('~/trained_models'),  # Home directory
+        ]
+        
+        models_dir = None
+        for path in possible_paths:
+            if os.path.exists(os.path.join(path, 'ipl_model.pkl')):
+                models_dir = path
+                break
+        
+        if models_dir is None:
+            st.error("❌ **Model files not found!**")
+            st.info("Please ensure `trained_models/` folder exists with `ipl_model.pkl`, `ipl_encoders.pkl`, and `model_metadata.pkl` files.")
+            return None, None, None
         
         with open(os.path.join(models_dir, 'ipl_model.pkl'), 'rb') as f:
             model = pickle.load(f)
@@ -121,7 +138,12 @@ def load_trained_model():
             metadata = pickle.load(f)
         
         return model, encoders, metadata
-    except FileNotFoundError:
+    except FileNotFoundError as e:
+        st.error(f"❌ **Model Loading Error:** {str(e)}")
+        st.info("To fix this:\n1. Run `train_and_save_model.py` to generate model files\n2. Create `trained_models/` folder in the app directory\n3. Ensure files are: `ipl_model.pkl`, `ipl_encoders.pkl`, `model_metadata.pkl`")
+        return None, None, None
+    except Exception as e:
+        st.error(f"❌ **Unexpected Error:** {str(e)}")
         return None, None, None
 
 # --- 4. Helpers ---
@@ -159,7 +181,30 @@ if data is None:
 model, encoders, metadata = load_trained_model()
 
 if model is None:
-    st.error("Error: Could not load trained model. Please run 'train_and_save_model.py' first to train and save the model.")
+    st.error("❌ **Failed to Load Model**")
+    st.markdown("""
+    ### How to Fix This:
+    
+    **Option 1: Local Setup**
+    1. Ensure you're running this app in the `Machine_learning` directory
+    2. Run `train_and_save_model.py` to generate model files
+    3. Check that `trained_models/` folder contains:
+       - `ipl_model.pkl`
+       - `ipl_encoders.pkl`
+       - `model_metadata.pkl`
+    
+    **Option 2: Streamlit Cloud**
+    1. Push the `trained_models/` folder to your GitHub repository
+    2. Make sure `.gitignore` doesn't exclude `.pkl` files
+    3. Or upload model files to GitHub Releases and download them
+    
+    **Option 3: Check Current Directory**
+    """)
+    
+    # Show current working directory for debugging
+    st.code(f"Current directory: {os.getcwd()}", language="python")
+    st.code(f"Files in current dir: {os.listdir('.')[:20]}", language="python")
+    
     st.stop()
 
 # --- Display Model Info ---
