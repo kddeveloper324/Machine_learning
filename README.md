@@ -19,5 +19,7 @@ This project is a Machine Learning web application designed to predict the winne
 * **Streamlit** (Frontend)
 * **Scikit-Learn/Pandas** (Machine Learning & Data Processing)
 ### Output Screen Shot
-<img width="1918" height="848" alt="Screenshot 2025-12-08 155308" src="https://github.com/user-attachments/assets/b4847548-275f-41fb-973a-9cdba7968f6f" />
+<img width="1914" height="844" alt="1" src="https://github.com/user-attachments/assets/67e6708c-d8b6-4c5c-866f-aba87175103a" />
+
+<img width="1914" height="858" alt="2" src="https://github.com/user-attachments/assets/02817265-98e7-47aa-bf1c-1048fdb0435b" />
 
